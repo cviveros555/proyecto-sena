@@ -14,7 +14,8 @@ class DocenteController extends Controller
      */
     public function index()
     {
-        //
+        $docent = Docente::all();
+        return view('docentes.index', compact('docent'));
     }
 
     /**
@@ -43,6 +44,9 @@ class DocenteController extends Controller
         $docent->ciudad = $request->input('ciudad');
         $docent->direccion = $request->input('direccion');
         $docent->correo_electronico = $request->input('correo_electronico');
+        if($request->hasFile('imagen')){
+            $docent->imagen = $request->file('imagen')->store('public/docentes');
+        }
         $docent->save();
         return 'Guardado con Exito';
     }
@@ -53,9 +57,10 @@ class DocenteController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(string $id)
     {
-        //
+        $docent = Docente::find($id);
+        return view('docentes.show', compact('docent'));
     }
 
     /**
@@ -64,9 +69,10 @@ class DocenteController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(string $id)
     {
-        //
+        $docent = Docente::find($id);
+        return view('docentes.edit', compact('docent'));
     }
 
     /**
@@ -76,9 +82,15 @@ class DocenteController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request,string $id)
     {
-        //
+        $docent = Docente::find($id);
+        $docent->fill($request->except('imagen'));
+        if ($request->hasFile('imagen')){
+            $docent->imagen = $request->file('imagen')->store('public/docentes');
+            $docent->save();
+            return 'Perfil actualizado';
+        }
     }
 
     /**

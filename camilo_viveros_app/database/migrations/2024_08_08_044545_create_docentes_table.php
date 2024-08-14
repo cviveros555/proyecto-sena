@@ -17,7 +17,14 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->string('nombre');
-            $table->integer('edad');
+            $table->string('apellido');
+            $table->integer('numero_documento');
+            $table->integer('numero_celular');
+            $table->string('ciudad');
+            $table->string('direccion');
+            $table->string('correo_electronico');
+            $table->string('imagen');
+
         });
     }
 

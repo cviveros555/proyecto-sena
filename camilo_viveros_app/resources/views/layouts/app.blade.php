@@ -18,13 +18,13 @@
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                    <a class="nav-link active" aria-current="page" href="/docentes/create">Inicio</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#">Cursos</a>
                   </li>
                  <li class="nav-item">
-                    <a class="nav-link" href="#">Docentes</a>
+                    <a class="nav-link" href="/docentes">Docentes</a>
                   </li>
                </ul>
                 <form class="d-flex" role="search">
