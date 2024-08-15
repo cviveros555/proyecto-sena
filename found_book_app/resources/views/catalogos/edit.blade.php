@@ -19,7 +19,7 @@
             <input name="autor" class="form-control" id="autor" value="{{$catalg->autor}}" type="text">
           </div>
         <div class="col-4">
-          <label for="editorial" class="form-label">Modifique el numero de documento</label>
+          <label for="editorial" class="form-label">Modifique la editorial</label>
           <input name="editorial" class="form-control" id="editorial" value="{{$catalg->editorial}}" type="text">
         </div>
         <div class="col-4">

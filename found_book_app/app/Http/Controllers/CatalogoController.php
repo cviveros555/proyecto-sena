@@ -88,7 +88,7 @@ class CatalogoController extends Controller
         if ($request->hasFile('imagen')){
             $catalg->imagen = $request->file('imagen')->store('public/catalogos');
             $catalg->save();
-            return 'Perfil actualizado';
+            return 'Libro actualizado';
         }
     }
 
