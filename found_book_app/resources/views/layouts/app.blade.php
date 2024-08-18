@@ -22,7 +22,7 @@
                     <a class="nav-link" href="/catalogos/create">Catalogo de Libros</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Formulario Prestamo</a>
+                    <a class="nav-link" href="/prestamos/create">Formulario Prestamo</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#">Contactame</a>

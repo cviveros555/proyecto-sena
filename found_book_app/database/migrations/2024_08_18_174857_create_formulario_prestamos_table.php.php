@@ -13,17 +13,15 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('catalogos', function (Blueprint $table) {
+        Schema::create('formulario_prestamos', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('nombre_libro');
-            $table->string('autor');
-            $table->string('descripcion');
-            $table->string('editorial');
-            $table->integer('existencia');
-            $table->string('genero');
-            $table->string('imagen');
-
+            $table->string('nombre_completo');
+            $table->integer('numero_identificacion');
+            $table->string('direccion');
+            $table->integer('telefono');
+            $table->date('fecha_solicitud');
+            $table->date('fecha_devolucion');
         });
     }
 
@@ -34,8 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::table('catalogos', function (Blueprint $table) {
-            //
-        });
+        //
     }
 };

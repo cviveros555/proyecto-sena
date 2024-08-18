@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CatalogoController;
+use App\Http\Controllers\PrestamoController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,3 +20,4 @@ Route::get('/', function () {
 });
 
 Route::resource('/catalogos', CatalogoController::class);
+Route::resource('/prestamos', PrestamoController::class);
