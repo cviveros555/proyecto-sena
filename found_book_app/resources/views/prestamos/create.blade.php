@@ -5,6 +5,9 @@
 @section('content')
 <br>
 <h5><center>Crear Solicitud de Prestamo</h5></center>
+
+<a class="btn btn-link" href="/prestamos" role="button">Ver Solicitudes Anteriores</a>
+<br>
 <br>
 <form action ="/prestamos" method="POST" enctype="multipart/form-data">
     @csrf

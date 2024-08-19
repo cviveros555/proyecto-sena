@@ -55,7 +55,7 @@ class PrestamoController extends Controller
      */
     public function show(string $id)
     {
-        $catalg = Prestamo::find($id);
+        $loan = Prestamo::find($id);
         return view('prestamos.show', compact('loan'));
     }
 
@@ -67,7 +67,7 @@ class PrestamoController extends Controller
      */
     public function edit(string $id)
     {
-        $catalg = Prestamo::find($id);
+        $loan = Prestamo::find($id);
         return view('prestamos.edit', compact('loan'));
     }
 
@@ -81,6 +81,7 @@ class PrestamoController extends Controller
     public function update(Request $request,string $id)
     {
         $loan = Prestamo::find($id);
+        $loan->update($request->all());
             $loan->save();
             return 'Solicitud actualizada';
         }
