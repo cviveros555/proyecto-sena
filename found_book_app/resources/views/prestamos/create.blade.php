@@ -19,7 +19,7 @@
         </div>
         <div class="col-6">
             <label for="numero_identificacion" class="form-label">Numero de Identificacion</label>
-            <input type="text" class="form-control" id="numero_identificacion" name="numero_identificacion">
+            <input type="number" class="form-control" id="numero_identificacion" name="numero_identificacion">
           </div>
         <div class="col-6">
           <label for="direccion" class="form-label">Direccion</label>
@@ -41,9 +41,29 @@
           <br>
         </div>
           <br>
-        <div class="col-12">
-         <center> <button type="submit" class="btn btn-success">Solicitud Completa</button>
-        </div></center>
+            <!-- Button trigger modal -->
+<center><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Solicitud Completa
+  </button></center>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">¿Esta Seguro?</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ¡¡Le recomendamos verificar que sus datos esten bien escritos antes de continuar, de lo contrario de clic en Enviar Solicitud!!
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Verificar</button>
+          <button type="submit" class="btn btn-success">Enviar Solicitud</button>
+        </div>
+      </div>
+    </div>
+  </div>
     </div>
       </form>
 
